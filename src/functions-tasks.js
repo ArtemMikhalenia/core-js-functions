@@ -150,8 +150,8 @@ function retry(func, attempts) {
     for (let i = 0; i < attempts; i += 1) {
       try {
         result = func();
-      } catch (error) {
-        console.log(error.message);
+      } catch {
+        // error
       }
     }
     return result;
